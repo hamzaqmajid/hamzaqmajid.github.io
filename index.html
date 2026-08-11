@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hamza Majid — AI Engineer & Researcher</title>
+<title>Hamza Majid AI Engineer & Researcher</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -19,7 +19,7 @@
   --tealA:rgba(58,175,169,0.12);
   --txt:#EDE8D8;
   --txt2:#7A95B8;
-  --txt3:#3E5472;
+  --txt3:#6B8BAE;
   --bdr:#18304D;
   --bdr2:#243D5C;
 }
@@ -29,10 +29,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-h
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(11,20,38,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr)}
 .n-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--amber);letter-spacing:0.06em;text-decoration:none}
-.n-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.n-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
 .n-links a{font-family:'Space Grotesk',sans-serif;font-size:0.83rem;font-weight:500;color:var(--txt2);text-decoration:none;transition:color .2s}
 .n-links a:hover{color:var(--txt)}
 .n-badge{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--teal);border:1px solid var(--teal);padding:0.22rem 0.7rem;letter-spacing:0.06em}
+.n-cv{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;color:#0B1426;background:var(--amber);padding:0.3rem 0.9rem;text-decoration:none;letter-spacing:0.03em;transition:opacity .2s;white-space:nowrap}
+.n-cv:hover{opacity:0.85}
 
 /* ── HERO ── */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;overflow:hidden}
@@ -64,6 +66,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .eye::after{content:'';width:2.5rem;height:1px;background:var(--amber);opacity:.45}
 .sec-t{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--txt);letter-spacing:-0.02em;margin-bottom:3rem}
 
+/* ── PROJECT SUB-LABELS ── */
+.proj-sub{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;color:var(--txt3);letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;gap:1rem;margin:2.5rem 0 1.25rem}
+.proj-sub::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.proj-sub:first-child{margin-top:0}
+
 /* ── PROJECTS ── */
 .proj-wrap{display:flex;flex-direction:column;gap:1.25rem}
 .card{background:var(--card);border:1px solid var(--bdr);border-left:3px solid var(--bdr);padding:2rem;transition:border-color .3s,background .3s,transform .2s}
@@ -81,12 +88,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .tag{font-family:'JetBrains Mono',monospace;font-size:0.68rem;padding:0.22rem 0.55rem;letter-spacing:0.05em}
 .ta{background:var(--amberA);color:var(--amber);border:1px solid rgba(232,168,56,.22)}
 .tt{background:var(--tealA);color:var(--teal);border:1px solid rgba(58,175,169,.22)}
-.tm{background:rgba(62,84,114,.12);color:var(--txt3);border:1px solid var(--bdr)}
+.tm{background:rgba(107,139,174,0.1);color:var(--txt3);border:1px solid var(--bdr2)}
 .gh-link{font-family:'Space Grotesk',sans-serif;font-size:0.81rem;font-weight:500;color:var(--amber);text-decoration:none;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:0.4rem;transition:gap .2s}
 .gh-link:hover{gap:0.7rem}
 
+/* ── TWO-COLUMN LAYOUT (Experience + Education) ── */
+.two-col{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+.sidebar-card{background:var(--card);border:1px solid var(--bdr);border-left:3px solid var(--amber);padding:1.5rem;margin-bottom:1.25rem}
+.sidebar-card:last-child{margin-bottom:0}
+.sb-title{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--amber);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--bdr)}
+.sb-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0}
+.sb-stat-num{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--amber);line-height:1;margin-bottom:0.2rem}
+.sb-stat-lbl{font-size:0.73rem;color:var(--txt2);line-height:1.3}
+.sb-list{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.sb-list li{font-size:0.82rem;color:var(--txt2);padding-left:1rem;position:relative;line-height:1.5}
+.sb-list li::before{content:'→';position:absolute;left:0;color:var(--amber);opacity:.55;font-size:0.72rem;top:.05rem}
+.sb-text{font-size:0.83rem;color:var(--txt2);line-height:1.65}
+
 /* ── TIMELINE ── */
-.tl{position:relative;padding-left:1.75rem;max-width:760px}
+.tl{position:relative;padding-left:1.75rem}
 .tl::before{content:'';position:absolute;left:0;top:.4rem;bottom:0;width:1px;background:linear-gradient(to bottom,var(--amber) 0%,var(--bdr) 100%)}
 .tl-item{position:relative;padding-bottom:2.8rem;padding-left:1.75rem}
 .tl-item:last-child{padding-bottom:0}
@@ -100,7 +120,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .tl-ul li::before{content:'→';position:absolute;left:0;color:var(--amber);opacity:.55;font-size:0.73rem;top:.07rem}
 
 /* ── SKILLS ── */
-.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;max-width:900px}
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem}
 .sk-title{font-family:'JetBrains Mono',monospace;font-size:0.66rem;color:var(--txt3);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--bdr)}
 .sk-tags{display:flex;flex-wrap:wrap;gap:0.38rem}
 
@@ -118,6 +138,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .reveal.vis{opacity:1;transform:none}
 
 /* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .two-col{grid-template-columns:1fr}
+  .sidebar-right{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+  .sidebar-card{margin-bottom:0}
+}
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}
   .hc{padding:0 1.5rem}
@@ -132,6 +157,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @media(max-width:600px){
   .n-links .hm{display:none}
   .h-name{font-size:clamp(2.5rem,11vw,3.5rem)}
+  .sidebar-right{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -147,6 +173,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <li class="hm"><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><span class="n-badge">Open to Work</span></li>
+    <li><a href="CV/Hamza%20Majid%27s%20Resume.pdf" target="_blank" class="n-cv">&#8595; CV</a></li>
   </ul>
 </nav>
 
@@ -181,24 +208,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   </div>
   <div class="stat reveal">
     <div class="s-num">9+</div>
-    <div class="s-lbl">Production microservices<br>built & maintained</div>
+    <div class="s-lbl">Production microservices<br>built &amp; maintained</div>
   </div>
 </div>
 
 <!-- PROJECTS -->
 <section class="sec" id="projects">
-  <div class="eye">Research & Projects</div>
-  <h2 class="sec-t">Selected Work</h2>
+  <div class="eye">Work</div>
+  <h2 class="sec-t">Research &amp; Projects</h2>
 
   <div class="proj-wrap">
 
-    <!-- Featured -->
+    <!-- ── ACADEMIC & RESEARCH WORK ── -->
+    <div class="proj-sub">Academic &amp; Research Work</div>
+
+    <!-- GNN Featured -->
     <div class="card card-feat reveal">
       <span class="pill-feat">FEATURED · ONGOING · BTU COTTBUS</span>
       <h3 class="c-title">GNN vs. Transformer for Road Network Trajectory Prediction</h3>
       <div class="c-assoc">GraphSAGE · Transformers · Self-Attention · PyTorch · OpenStreetMap</div>
-      <p class="c-desc">Built an end-to-end comparative ML system on real-world map data (~2K nodes, ~5K edges from OpenStreetMap). Generated realistic movement trajectories via random walk simulation to model road traffic behaviour. Implemented GraphSAGE to capture spatial node relationships and a Transformer with self-attention to model sequential patterns with full training pipelines, cross-entropy loss, and evaluation on next-node prediction.</p>
-      <div class="insight"><strong>Key finding:</strong> Transformers outperformed GNNs on sequential trajectory dependencies; GNNs captured structural road graph relationships more effectively — providing empirical guidance for architecture selection in autonomous driving and spatial AI systems.</div>
+      <p class="c-desc">Built an end-to-end comparative ML system on real-world map data (~2K nodes, ~5K edges from OpenStreetMap). Generated realistic movement trajectories via random walk simulation to model road traffic behaviour. Implemented GraphSAGE to capture spatial node relationships and a Transformer with self-attention to model sequential patterns with full training pipelines, cross-entropy loss, and evaluation on next-node prediction accuracy.</p>
+      <div class="insight"><strong>Key finding:</strong> Transformers outperformed GNNs on sequential trajectory dependencies; GNNs captured structural road graph relationships more effectively providing empirical guidance for architecture selection in autonomous driving and spatial AI systems where both spatial context and temporal sequence must be modelled simultaneously.</div>
       <div class="tags">
         <span class="tag ta">GraphSAGE</span>
         <span class="tag ta">Transformers</span>
@@ -212,14 +242,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <a href="https://github.com/hamzaqmajid/path-prediction" target="_blank" class="gh-link">GitHub →</a>
     </div>
 
-    <!-- Two smaller cards -->
+    <!-- O-RAN + PyReco side by side -->
     <div class="card-2">
 
       <div class="card reveal">
         <span class="pill-feat pill-teal">CURRENT · TU BERLIN</span>
         <h3 class="c-title">Private 5G O-RAN XAI Testbed</h3>
-        <div class="c-assoc">OpenAirInterface · FlexRIC · InfluxDB · Grafana</div>
-        <p class="c-desc">Deployed a fully software-defined 5G Standalone network as a live AI/XAI research environment. Built a real-time KPI pipeline (E2 → SQLite → InfluxDB → Grafana) for per-UE metrics. Designed RL-based resource allocation data export and XAI transparency decision layer foundation for AI-driven intelligent network management.</p>
+        <div class="c-assoc">OpenAirInterface · FlexRIC · InfluxDB · Grafana · Python</div>
+        <p class="c-desc">Deployed a fully software-defined 5G Standalone O-RAN network on a single machine as a live AI training and XAI validation environment. Built a real-time KPI pipeline (E2 → SQLite → InfluxDB → Grafana) capturing per-UE metrics. Designed RC service model data export workflows as the foundation for RL-based resource allocation and Explainable AI decision transparency research.</p>
+        <div class="insight"><strong>Current status:</strong> Fully operational testbed with validated KPM/RC data reception across the protocol stack generating structured per-UE datasets (throughput, delay, PRB usage) for downstream RL and XAI experiments. RL resource allocation layer currently in design.</div>
         <div class="tags">
           <span class="tag ta">O-RAN</span>
           <span class="tag ta">XAI</span>
@@ -233,38 +264,65 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
 
       <div class="card reveal">
-        <span class="pill-feat pill-teal">QUANT FINANCE</span>
-        <h3 class="c-title">S&P 500 Time-Series Forecasting Pipeline</h3>
-        <div class="c-assoc">LSTM · TensorFlow · Backtesting · BTU Cottbus</div>
-        <p class="c-desc">Full-stack ML pipeline forecasting S&P 500 price movements using 5 years of historical data. Engineered 50+ technical indicators (Bollinger Bands, RSI, MACD, ATR). LSTM outperformed regression baselines on long-range temporal dependencies validated via walk-forward backtesting with Sharpe ratio and drawdown metrics.</p>
+        <span class="pill-feat pill-teal">OPEN SOURCE · TU BERLIN</span>
+        <h3 class="c-title">PyReco Reservoir Computing Library</h3>
+        <div class="c-assoc">Echo State Networks · Python · Decorator Pattern · Open Source</div>
+        <p class="c-desc">Contributed to PyReco, an open-source Python library for Reservoir Computing and Echo State Networks (ESNs) used by AI/ML researchers globally. Corrected pipeline logic in the Autonomous Reservoir Computing module. Built an interactive neural network topology visualisation tool and designed a production-grade error handling framework using Validator and Decorator patterns.</p>
+        <div class="insight"><strong>Key finding:</strong> Root cause of prediction errors traced to incorrect result aggregation in the Autonomous RC pipeline fix improved time-series prediction accuracy by 65% across all benchmarks. Error handling framework adopted across all library modules, improving reliability for 100+ researchers globally.</div>
         <div class="tags">
-          <span class="tag ta">LSTM</span>
-          <span class="tag ta">Time-Series</span>
-          <span class="tag tt">TensorFlow</span>
-          <span class="tag tt">Scikit-learn</span>
-          <span class="tag tm">Backtesting</span>
-          <span class="tag tm">Sharpe Ratio</span>
-          <span class="tag tm">Pandas</span>
+          <span class="tag ta">Reservoir Computing</span>
+          <span class="tag ta">Echo State Networks</span>
+          <span class="tag tt">Python</span>
+          <span class="tag tt">NumPy</span>
+          <span class="tag tm">Matplotlib</span>
+          <span class="tag tm">Open Source</span>
+          <span class="tag tm">Decorator Pattern</span>
         </div>
-        <a href="https://github.com/hamzaqmajid/Financial-Time-Series-Forecasting-System" target="_blank" class="gh-link">GitHub →</a>
       </div>
 
     </div>
 
-    <!-- PyReco card -->
+    <!-- ── PERSONAL PROJECTS ── -->
+    <div class="proj-sub">Personal Projects</div>
+
+    <!-- S&P 500 full width -->
     <div class="card reveal">
-      <span class="pill-feat pill-teal">OPEN SOURCE · TU BERLIN</span>
-      <h3 class="c-title">PyReco — Reservoir Computing Library Contribution</h3>
-      <div class="c-assoc">Echo State Networks · Python · Decorator Pattern · Open Source</div>
-      <p class="c-desc">Contributed to PyReco, an open-source Python library for Reservoir Computing and Echo State Networks (ESNs) used by AI/ML researchers globally. Corrected pipeline logic in the Autonomous Reservoir Computing module, improving time-series prediction accuracy by 65%. Built an interactive neural network topology visualisation tool and designed a production-grade error handling framework using Validator and Decorator patterns.</p>
+      <span class="pill-feat pill-teal">QUANT FINANCE · MULTI-ASSET</span>
+      <h3 class="c-title">Financial Time-Series Forecasting Pipeline SPY, QQQ &amp; Equities</h3>
+      <div class="c-assoc">LSTM · XGBoost · Logistic Regression · Streamlit · Walk-Forward Validation</div>
+      <p class="c-desc">Full-stack quantitative ML pipeline for next-day and 3-day price direction prediction across multiple tickers (SPY, QQQ, individual equities). Engineered 55+ leakage-free technical and regime-context features (VIX relative to trailing median, drawdown-from-high, bull/bear trend flag, RSI, MACD, Bollinger Bands) using only information available at market close. Benchmarked Logistic Regression, XGBoost, and LSTM head-to-head on identical expanding-window walk-forward folds with embargo/purge gaps every model compared against a mandatory majority-class baseline. Full backtesting engine with transaction costs, Sharpe ratio, and drawdown metrics; three position-sizing overlays evaluated empirically. Interactive Streamlit dashboard with live per-ticker model training, walk-forward evaluation, and predictions on demand.</p>
+      <div class="insight"><strong>Honest result:</strong> Walk-forward AUC ~0.50–0.54 a small, inconsistent edge over a naive baseline, reported as-is. A model with decent classification accuracy can still produce a negative post-cost Sharpe ratio; that combination is a valid finding, not something to explain away.</div>
       <div class="tags">
-        <span class="tag ta">Reservoir Computing</span>
-        <span class="tag ta">Echo State Networks</span>
-        <span class="tag tt">Python</span>
-        <span class="tag tt">NumPy</span>
-        <span class="tag tm">Matplotlib</span>
-        <span class="tag tm">Open Source</span>
-        <span class="tag tm">Decorator Pattern</span>
+        <span class="tag ta">LSTM</span>
+        <span class="tag ta">XGBoost</span>
+        <span class="tag ta">Walk-Forward Validation</span>
+        <span class="tag tt">TensorFlow / PyTorch</span>
+        <span class="tag tt">Scikit-learn</span>
+        <span class="tag tt">Streamlit</span>
+        <span class="tag tm">Backtesting</span>
+        <span class="tag tm">Sharpe Ratio</span>
+        <span class="tag tm">Embargo / Purge</span>
+        <span class="tag tm">Pandas</span>
+        <span class="tag tm">yfinance / FRED</span>
+      </div>
+      <a href="https://github.com/hamzaqmajid/Financial-Time-Series-Forecasting-System" target="_blank" class="gh-link">GitHub →</a>
+    </div>
+
+    <!-- Recall card -->
+    <div class="card reveal">
+      <span class="pill-feat pill-teal">IN PROGRESS · RAG</span>
+      <h3 class="c-title">Recall Multi-Document RAG Pipeline</h3>
+      <div class="c-assoc">LangChain · FAISS / ChromaDB · Sentence Transformers · Python</div>
+      <p class="c-desc">Building a multi-document Retrieval-Augmented Generation pipeline comparing chunking strategies (fixed-size, semantic, sliding window) and embedding models on retrieval quality. Evaluated with recall@k metrics against a held-out question set. Phase 5 target: domain-specific deployment for financial and ML research papers, connecting directly to the quantitative finance research interest.</p>
+      <div class="tags">
+        <span class="tag ta">RAG</span>
+        <span class="tag ta">Vector Database</span>
+        <span class="tag tt">LangChain</span>
+        <span class="tag tt">FAISS</span>
+        <span class="tag tm">Sentence Transformers</span>
+        <span class="tag tm">Embeddings</span>
+        <span class="tag tm">Chunking Strategies</span>
+        <span class="tag tm">Recall@k</span>
       </div>
     </div>
 
@@ -276,58 +334,105 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <div class="eye">Career</div>
   <h2 class="sec-t">Experience</h2>
 
-  <div class="tl">
+  <div class="two-col">
 
-    <div class="tl-item reveal">
-      <div class="tl-dot now"></div>
-      <div class="tl-period">MAY 2026 – PRESENT</div>
-      <div class="tl-role">Working Student — AI / XAI Research</div>
-      <div class="tl-org">Technische Universität Berlin · Berlin, Germany</div>
-      <ul class="tl-ul">
-        <li>Deployed a software-defined 5G Standalone O-RAN testbed (OpenAirInterface + FlexRIC) as a live AI training and XAI validation environment</li>
-        <li>Built real-time KPI monitoring pipeline: E2 interface → SQLite → InfluxDB → Grafana (per-UE throughput, delay, PRB usage)</li>
-        <li>Integrated RC service model; designing RL-based resource allocation layer and XAI transparency decision framework</li>
-        <li>Automated full testbed lifecycle via Python and shell scripts; reproducible with a single command from team Git repository</li>
-      </ul>
+    <!-- Left: Timeline -->
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="tl-dot now"></div>
+        <div class="tl-period">MAY 2026 – PRESENT</div>
+        <div class="tl-role">Student Assistant AI / XAI Research</div>
+        <div class="tl-org">Technische Universität Berlin · Berlin, Germany</div>
+        <ul class="tl-ul">
+          <li>Deployed a software-defined 5G Standalone O-RAN testbed (OpenAirInterface + FlexRIC) as a live AI training and XAI validation environment</li>
+          <li>Built real-time KPI monitoring pipeline: E2 interface → SQLite → InfluxDB → Grafana (per-UE throughput, delay, PRB usage)</li>
+          <li>Integrated RC service model; designing RL-based resource allocation layer and XAI transparency decision framework</li>
+          <li>Automated full testbed lifecycle via Python and shell scripts; reproducible from team Git repository</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-period">AUG 2025 – APR 2026</div>
+        <div class="tl-role">Working Student AI/ML Research Engineer</div>
+        <div class="tl-org">Technische Universität Berlin · PyReco Open-Source Library</div>
+        <ul class="tl-ul">
+          <li>Improved time-series prediction accuracy by 65% by correcting Autonomous Reservoir Computing pipeline logic</li>
+          <li>Built interactive neural network visualisation tool used by researchers globally</li>
+          <li>Designed production-grade error handling framework (Validator + Decorator patterns) for 100+ library users</li>
+          <li>Contributed across full Python codebase: optimisation, test coverage, refactoring, documentation</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-period">APR 2023 – APR 2025</div>
+        <div class="tl-role">Software Engineer</div>
+        <div class="tl-org">Bank AL Habib · Karachi, Pakistan</div>
+        <ul class="tl-ul">
+          <li>Built and maintained 9+ production microservices (Java / Quarkus) handling millions of daily banking transactions</li>
+          <li>Reduced inter-service latency by 95% via Apache ActiveMQ event-driven architecture replacing synchronous HTTP</li>
+          <li>Optimised critical processing modules 40% reduction in execution time across key workflows</li>
+          <li>Redesigned microservices as reusable shared dependencies: +80% integration efficiency, −60% delivery time</li>
+          <li>Designed IBM Db2 schemas and BIRT reports for financial reporting and operational risk monitoring</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-period">AUG 2022 – MAR 2023</div>
+        <div class="tl-role">Trainee Software Engineer</div>
+        <div class="tl-org">Bank AL Habib · Karachi, Pakistan</div>
+        <ul class="tl-ul">
+          <li>Developed Java / Quarkus microservices and contributed to CI/CD deployment pipelines</li>
+          <li>Built analytical dashboards using Power BI and IBM Cognos Analytics</li>
+          <li>Managed data workflows across SQL Server and IBM Db2 querying, optimisation, transactional processing</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-period">AUG 2025 – APR 2026</div>
-      <div class="tl-role">Working Student — AI/ML Research Engineer</div>
-      <div class="tl-org">Technische Universität Berlin · PyReco Open-Source Library</div>
-      <ul class="tl-ul">
-        <li>Improved time-series prediction accuracy by 65% by correcting Autonomous Reservoir Computing pipeline logic</li>
-        <li>Built interactive neural network visualisation tool used by researchers globally</li>
-        <li>Designed production-grade error handling framework (Validator + Decorator patterns) for 100+ library users</li>
-        <li>Contributed across full Python codebase: optimisation, test coverage, refactoring, and documentation</li>
-      </ul>
-    </div>
-
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-period">APR 2023 – APR 2025</div>
-      <div class="tl-role">Software Engineer</div>
-      <div class="tl-org">Bank AL Habib · Karachi, Pakistan</div>
-      <ul class="tl-ul">
-        <li>Built and maintained 9+ production microservices (Java / Quarkus) handling millions of daily banking transactions</li>
-        <li>Reduced inter-service latency by 95% via Apache ActiveMQ event-driven architecture replacing synchronous HTTP</li>
-        <li>Optimised critical processing modules 40% reduction in execution time across key workflows</li>
-        <li>Redesigned microservices as reusable shared dependencies: +80% integration efficiency, −60% delivery time</li>
-        <li>Designed IBM Db2 schemas and BIRT reports for financial reporting and operational risk monitoring</li>
-      </ul>
-    </div>
-
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-period">AUG 2022 – MAR 2023</div>
-      <div class="tl-role">Trainee Software Engineer</div>
-      <div class="tl-org">Bank AL Habib · Karachi, Pakistan</div>
-      <ul class="tl-ul">
-        <li>Developed Java / Quarkus microservices and contributed to CI/CD deployment pipelines</li>
-        <li>Built analytical dashboards using Power BI and IBM Cognos Analytics</li>
-        <li>Managed data workflows across SQL Server and IBM Db2 querying, optimisation, transactional processing</li>
-      </ul>
+    <!-- Right: Sidebar -->
+    <div class="sidebar-right reveal">
+      <div class="sidebar-card">
+        <div class="sb-title">Key Impact</div>
+        <div class="sb-stats">
+          <div>
+            <div class="sb-stat-num">95%</div>
+            <div class="sb-stat-lbl">Latency reduction, banking systems</div>
+          </div>
+          <div>
+            <div class="sb-stat-num">40%</div>
+            <div class="sb-stat-lbl">Faster execution, critical modules</div>
+          </div>
+          <div>
+            <div class="sb-stat-num">65%</div>
+            <div class="sb-stat-lbl">Accuracy gain, time-series prediction</div>
+          </div>
+          <div>
+            <div class="sb-stat-num">9+</div>
+            <div class="sb-stat-lbl">Production microservices shipped</div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sb-title">Current Focus</div>
+        <ul class="sb-list">
+          <li>AI/XAI research on live 5G O-RAN network data at TU Berlin</li>
+          <li>GNN vs. Transformer for autonomous driving trajectory prediction</li>
+          <li>Seeking thesis &amp; internship roles in Germany autonomous systems, intelligent networks, applied ML</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <div class="sb-title">Domain Expertise</div>
+        <div class="sk-tags" style="margin-top:.25rem">
+          <span class="tag ta">AI Research</span>
+          <span class="tag ta">Graph Neural Networks</span>
+          <span class="tag tt">5G / O-RAN</span>
+          <span class="tag tt">Financial ML</span>
+          <span class="tag tm">Banking Systems</span>
+          <span class="tag tm">Open Source</span>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -338,26 +443,57 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <div class="eye">Education</div>
   <h2 class="sec-t">Academic Background</h2>
 
-  <div class="tl" style="max-width:760px">
-    <div class="tl-item reveal">
-      <div class="tl-dot now"></div>
-      <div class="tl-period">APR 2025 – PRESENT</div>
-      <div class="tl-role">M.Sc. Artificial Intelligence</div>
-      <div class="tl-org">Brandenburg University of Technology Cottbus-Senftenberg (BTU)</div>
-      <ul class="tl-ul">
-        <li>Relevant modules: Mathematical Method for Artificial Intelligence, Explainable Machine Learning, Cognitive Systems: Behavior Control, Biological Neuronal Networks, Introduction to Neural Signal Analysis, Optimization in Business Transformation, Language Models: Machine Learning Basics to Modern Artificial Intelligence</li>
-        <li>Active research: GNN vs. Transformer for trajectory prediction, S&P 500 forecasting pipeline</li>
-      </ul>
+  <div class="two-col">
+
+    <!-- Left: Timeline -->
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="tl-dot now"></div>
+        <div class="tl-period">APR 2025 – PRESENT (Expected Mar 2027)</div>
+        <div class="tl-role">M.Sc. Artificial Intelligence</div>
+        <div class="tl-org">Brandenburg University of Technology Cottbus-Senftenberg (BTU)</div>
+        <ul class="tl-ul">
+          <li>Core modules: Machine Learning, Deep Learning, Graph Theory, Statistical Methods, Language Models, NLP, Computer Vision, Optimisation</li>
+          <li>Active thesis search: autonomous driving AI, intelligent network management, applied ML in Germany</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-period">SEP 2018 – MAY 2022</div>
+        <div class="tl-role">B.Sc. Computer Science</div>
+        <div class="tl-org">Institute of Business Management, Karachi</div>
+        <ul class="tl-ul">
+          <li>Modules: Data Structures &amp; Algorithms, Digital Signal Processing, Databases, Software Design, Mathematics</li>
+        </ul>
+      </div>
     </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-period">SEP 2018 – MAY 2022</div>
-      <div class="tl-role">B.Sc. Computer Science</div>
-      <div class="tl-org">Institute of Business Management, Karachi</div>
-      <ul class="tl-ul">
-        <li>Modules: Artificial Intelligence, Machine Learning, Mathematics, Software Design, Databases, Computer Science Fundamentals</li>
-      </ul>
+
+    <!-- Right: Sidebar -->
+    <div class="sidebar-right reveal">
+      <div class="sidebar-card">
+        <div class="sb-title">Active Research Projects</div>
+        <ul class="sb-list">
+          <li>GNN vs. Transformer road network trajectory prediction (BTU)</li>
+          <li>5G O-RAN testbed with RL + XAI layer (TU Berlin)</li>
+          <li>Multi-asset financial ML forecasting pipeline</li>
+          <li>Recall Multi-document RAG pipeline</li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <div class="sb-title">MSc Core Modules</div>
+        <div class="sk-tags" style="margin-top:.25rem">
+          <span class="tag ta">Machine Learning</span>
+          <span class="tag ta">Deep Learning</span>
+          <span class="tag tt">Graph Theory</span>
+          <span class="tag tt">Language Models</span>
+          <span class="tag tm">NLP</span>
+          <span class="tag tm">Computer Vision</span>
+          <span class="tag tm">Statistical Methods</span>
+          <span class="tag tm">Optimisation</span>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -368,7 +504,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="sk-grid">
     <div class="reveal">
-      <div class="sk-title">AI & Machine Learning</div>
+      <div class="sk-title">AI &amp; Machine Learning</div>
       <div class="sk-tags">
         <span class="tag ta">Graph Neural Networks</span>
         <span class="tag ta">Transformers</span>
@@ -377,10 +513,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
         <span class="tag tt">PyTorch</span>
         <span class="tag tt">TensorFlow</span>
         <span class="tag tt">Scikit-learn</span>
+        <span class="tag tt">XGBoost</span>
         <span class="tag tm">NLP</span>
         <span class="tag tm">Computer Vision</span>
         <span class="tag tm">XAI</span>
         <span class="tag tm">Reinforcement Learning</span>
+        <span class="tag tm">RAG</span>
       </div>
     </div>
     <div class="reveal">
@@ -395,7 +533,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </div>
     <div class="reveal">
-      <div class="sk-title">Infrastructure & Tools</div>
+      <div class="sk-title">Infrastructure &amp; Tools</div>
       <div class="sk-tags">
         <span class="tag ta">OpenAirInterface</span>
         <span class="tag ta">FlexRIC (O-RAN)</span>
@@ -406,10 +544,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
         <span class="tag tm">Apache ActiveMQ</span>
         <span class="tag tm">Quarkus</span>
         <span class="tag tm">Apache Spark</span>
+        <span class="tag tm">Streamlit</span>
       </div>
     </div>
     <div class="reveal">
-      <div class="sk-title">Quantitative & Finance</div>
+      <div class="sk-title">Quantitative &amp; Finance</div>
       <div class="sk-tags">
         <span class="tag ta">Time-Series Analysis</span>
         <span class="tag ta">Backtesting</span>
@@ -427,13 +566,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 <section class="sec contact" id="contact">
   <div class="eye" style="justify-content:center">Contact</div>
   <h2 class="co-t">Let's Work Together</h2>
-  <p class="co-sub">Open to thesis and internship roles in AI engineering, ML research, autonomous systems, and intelligent networks in Germany.</p>
+  <p class="co-sub">Open to thesis and internship roles in AI engineering, autonomous systems, intelligent network research, and applied ML in Germany.</p>
   <div class="co-links">
     <a href="mailto:qazihamzamajid@gmail.com" class="co-link">&#9993; qazihamzamajid@gmail.com</a>
     <a href="https://linkedin.com/in/qhamzamajid" target="_blank" class="co-link">in LinkedIn</a>
     <a href="https://github.com/hamzaqmajid" target="_blank" class="co-link">&#123;&#125; GitHub</a>
+    <a href="YOUR_CV_URL_HERE" target="_blank" class="co-link">&#8595; Download CV</a>
   </div>
-  <p class="footer">Hamza Majid &nbsp;·&nbsp; Berlin & Cottbus, Germany &nbsp;·&nbsp; 2026</p>
+  <p class="footer">Hamza Majid &nbsp;·&nbsp; Berlin &amp; Cottbus, Germany &nbsp;·&nbsp; 2026</p>
 </section>
 
 <script>

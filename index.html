@@ -20,6 +20,7 @@
   --txt:#EDE8D8;
   --txt2:#7A95B8;
   --txt3:#6B8BAE;
+  --txt4:#000000;
   --bdr:#18304D;
   --bdr2:#243D5C;
 }
@@ -33,9 +34,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .n-links a{font-family:'Space Grotesk',sans-serif;font-size:0.83rem;font-weight:500;color:var(--txt2);text-decoration:none;transition:color .2s}
 .n-links a:hover{color:var(--txt)}
 .n-badge{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--teal);border:1px solid var(--teal);padding:0.22rem 0.7rem;letter-spacing:0.06em}
-.n-cv{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;color:#0B1426;background:var(--amber);padding:0.3rem 0.9rem;text-decoration:none;letter-spacing:0.03em;transition:opacity .2s;white-space:nowrap}
-.n-cv:hover{opacity:0.85}
+.n-links a.n-cv {font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:600;color:#000000;background:var(--amber);padding:0.3rem 0.9rem;text-decoration:none;letter-spacing:0.03em;transition:opacity .2s;white-space:nowrap;
+}
 
+.n-links a.n-cv:hover {color:#000000;opacity:0.85;}
 /* ── HERO ── */
 .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;overflow:hidden}
 #gc{position:absolute;inset:0;width:100%;height:100%}

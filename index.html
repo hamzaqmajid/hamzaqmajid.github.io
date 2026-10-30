@@ -174,7 +174,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <li class="hm"><a href="#experience">Experience</a></li>
     <li class="hm"><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><span class="n-badge">Open to Work</span></li>
+    <li><span class="n-badge">Amazon Intern · Nov 2026</span></li>
     <li><a href="CV/Hamza%20Majid%27s%20Resume.pdf" target="_blank" class="n-cv">&#8595; CV</a></li>
   </ul>
 </nav>
@@ -186,7 +186,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <div class="h-eye">Based in Germany &nbsp;·&nbsp; MSc AI @ BTU Cottbus</div>
     <h1 class="h-name">Hamza Majid</h1>
     <p class="h-title">AI Engineer &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; <span>Builder</span></p>
-    <p class="h-desc">I bridge production software engineering and cutting-edge AI research from banking microservices at scale to GNN trajectory prediction and 5G XAI testbeds. I build things that work beyond the notebook.</p>
+    <p class="h-desc">Incoming SDE Intern at Amazon Berlin. I bridge production software engineering and cutting-edge AI research — from banking microservices at scale to explainable RL agents on live 5G networks. I build things that work beyond the notebook.</p>
     <div class="h-ctas">
       <a href="#projects" class="btn-p">View My Work</a>
       <a href="mailto:qazihamzamajid@gmail.com" class="btn-s">Get in Touch</a>
@@ -201,8 +201,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <div class="s-lbl">Years production<br>engineering</div>
   </div>
   <div class="stat reveal">
-    <div class="s-num">65%</div>
-    <div class="s-lbl">Accuracy improvement,<br>time-series prediction</div>
+    <div class="s-num">+12%</div>
+    <div class="s-lbl">Reward gain, XAI agent<br>vs black-box DQN baseline</div>
   </div>
   <div class="stat reveal">
     <div class="s-num">95%</div>
@@ -230,7 +230,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <h3 class="c-title">GNN vs. Transformer for Road Network Trajectory Prediction</h3>
       <div class="c-assoc">GraphSAGE · Transformers · Self-Attention · PyTorch · OpenStreetMap</div>
       <p class="c-desc">Built an end-to-end comparative ML system on real-world map data (~2K nodes, ~5K edges from OpenStreetMap). Generated realistic movement trajectories via random walk simulation to model road traffic behaviour. Implemented GraphSAGE to capture spatial node relationships and a Transformer with self-attention to model sequential patterns with full training pipelines, cross-entropy loss, and evaluation on next-node prediction accuracy.</p>
-      <div class="insight"><strong>Key finding:</strong> Transformers outperformed GNNs on sequential trajectory dependencies; GNNs captured structural road graph relationships more effectively providing empirical guidance for architecture selection in autonomous driving and spatial AI systems where both spatial context and temporal sequence must be modelled simultaneously.</div>
+      <div class="insight"><strong>Key finding:</strong> Transformer achieved <strong>61.1% next-node accuracy</strong> vs GraphSAGE <strong>45.8%</strong> vs random baseline 39.3% — demonstrating that sequential self-attention captures trajectory dependencies more effectively than graph message-passing on this task, while GNNs better encode structural road topology. Provides empirical guidance for architecture selection in autonomous driving systems where both spatial context and temporal sequence must be modelled simultaneously.</div>
       <div class="tags">
         <span class="tag ta">GraphSAGE</span>
         <span class="tag ta">Transformers</span>
@@ -248,25 +248,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <div class="card-2">
 
       <div class="card reveal">
-        <span class="pill-feat pill-teal">CURRENT · TU BERLIN</span>
-        <h3 class="c-title">Private 5G O-RAN XAI Testbed</h3>
-        <div class="c-assoc">OpenAirInterface · FlexRIC · InfluxDB · Grafana · Python</div>
-        <p class="c-desc">Deployed a fully software-defined 5G Standalone O-RAN network on a single machine as a live AI training and XAI validation environment. Built a real-time KPI pipeline (E2 → SQLite → InfluxDB → Grafana) capturing per-UE metrics. Designed RC service model data export workflows as the foundation for RL-based resource allocation and Explainable AI decision transparency research.</p>
-        <div class="insight"><strong>Current status:</strong> Fully operational testbed with validated KPM/RC data reception across the protocol stack generating structured per-UE datasets (throughput, delay, PRB usage) for downstream RL and XAI experiments. RL resource allocation layer currently in design.</div>
+        <span class="pill-feat pill-teal">COMPLETED · TU BERLIN · MAY–OCT 2026</span>
+        <h3 class="c-title">MXRL: Explainable RL Agent for 5G Network Slice Control</h3>
+        <div class="c-assoc">DQN · Dual Temporal Attention · Stable-Baselines3 · InfluxDB · Grafana · OpenAirInterface · FlexRIC</div>
+        <p class="c-desc">Designed and trained MXRL — a ~21K-parameter explainable DQN agent with dual temporal attention heads, a concept encoder, and a dueling Q-head — for intelligent 5G O-RAN slice resource allocation. Trained on 100+ model checkpoints across 2M steps with 16 parallel environments on an H100 GPU. Built the full XAI transparency stack: InfluxDB + Grafana dashboard with attention heatmaps, V(s)/A(s,a)/Q(s,a) decomposition, Q-gap analysis, and decision replay. Deployed on a private 5G Standalone testbed (OpenAirInterface + Open5GS + FlexRIC Near-RT RIC).</p>
+        <div class="insight"><strong>Results:</strong> MXRL outperformed black-box MLP baseline — reward <strong>+5.51 vs +4.91</strong> (95% CI +0.33–+0.87), false alarm rate <strong>15.3% vs 21.6%</strong>. With concept supervision: macro-F1 <strong>0.88</strong>, mapping agreement <strong>1.00</strong> across seeds (vs 0.23–0.25 unsupervised), reward improved to <strong>+5.88</strong>.</div>
         <div class="tags">
-          <span class="tag ta">O-RAN</span>
-          <span class="tag ta">XAI</span>
+          <span class="tag ta">Explainable AI (XAI)</span>
           <span class="tag ta">Reinforcement Learning</span>
+          <span class="tag ta">DQN</span>
+          <span class="tag tt">Stable-Baselines3</span>
           <span class="tag tt">FlexRIC</span>
           <span class="tag tt">OpenAirInterface</span>
           <span class="tag tm">InfluxDB</span>
           <span class="tag tm">Grafana</span>
+          <span class="tag tm">O-RAN</span>
           <span class="tag tm">Docker</span>
         </div>
       </div>
 
       <div class="card reveal">
-        <span class="pill-feat pill-teal">OPEN SOURCE · TU BERLIN</span>
+        <span class="pill-feat pill-teal">COMPLETED · OPEN SOURCE · TU BERLIN · AUG 2025 –APRIL 2026</span>
         <h3 class="c-title">PyReco Reservoir Computing Library</h3>
         <div class="c-assoc">Echo State Networks · Python · Decorator Pattern · Open Source</div>
         <p class="c-desc">Contributed to PyReco, an open-source Python library for Reservoir Computing and Echo State Networks (ESNs) used by AI/ML researchers globally. Corrected pipeline logic in the Autonomous Reservoir Computing module. Built an interactive neural network topology visualisation tool and designed a production-grade error handling framework using Validator and Decorator patterns.</p>
@@ -342,14 +344,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <div class="tl">
       <div class="tl-item reveal">
         <div class="tl-dot now"></div>
-        <div class="tl-period">MAY 2026 – PRESENT</div>
-        <div class="tl-role">Student Assistant AI / XAI Research</div>
+        <div class="tl-period">NOV 2026 – APR 2027</div>
+        <div class="tl-role">Software Development Engineer Intern</div>
+        <div class="tl-org">Amazon · Berlin, Germany</div>
+        <ul class="tl-ul">
+          <li>Incoming SDE internship at Amazon Berlin — starting November 2026</li>
+        </ul>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-period">MAY 2026 – OCT 2026</div>
+        <div class="tl-role">Student Assistant — Explainable RL for 5G Network Slice Control</div>
         <div class="tl-org">Technische Universität Berlin · Berlin, Germany</div>
         <ul class="tl-ul">
-          <li>Deployed a software-defined 5G Standalone O-RAN testbed (OpenAirInterface + FlexRIC) as a live AI training and XAI validation environment</li>
-          <li>Built real-time KPI monitoring pipeline: E2 interface → SQLite → InfluxDB → Grafana (per-UE throughput, delay, PRB usage)</li>
-          <li>Integrated RC service model; designing RL-based resource allocation layer and XAI transparency decision framework</li>
-          <li>Automated full testbed lifecycle via Python and shell scripts; reproducible from team Git repository</li>
+          <li>Designed and trained MXRL: explainable DQN agent (~21K params) with dual temporal attention, concept encoder, and dueling Q-head for 5G O-RAN slice resource allocation</li>
+          <li>Outperformed black-box MLP baseline: reward +5.51 vs +4.91 (95% CI +0.33–+0.87); false alarms 15.3% vs 21.6%</li>
+          <li>Achieved concept supervision macro-F1 0.88 and mapping agreement 1.00 across seeds (vs 0.23–0.25 unsupervised), lifting reward to +5.88</li>
+          <li>Trained 100+ models across 2M steps on H100 GPU (16 parallel envs via Stable-Baselines3); built InfluxDB + Grafana XAI dashboard with attention heatmaps and Q-value decomposition</li>
+          <li>Deployed on private 5G SA testbed: OpenAirInterface + Open5GS core + FlexRIC Near-RT RIC</li>
         </ul>
       </div>
 
@@ -407,8 +420,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
             <div class="sb-stat-lbl">Faster execution, critical modules</div>
           </div>
           <div>
-            <div class="sb-stat-num">65%</div>
-            <div class="sb-stat-lbl">Accuracy gain, time-series prediction</div>
+            <div class="sb-stat-num">+12%</div>
+            <div class="sb-stat-lbl">Reward gain, XAI agent vs black-box DQN</div>
           </div>
           <div>
             <div class="sb-stat-num">9+</div>
@@ -419,9 +432,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div class="sidebar-card">
         <div class="sb-title">Current Focus</div>
         <ul class="sb-list">
-          <li>AI/XAI research on live 5G O-RAN network data at TU Berlin</li>
-          <li>GNN vs. Transformer for autonomous driving trajectory prediction</li>
-          <li>Seeking thesis &amp; internship roles in Germany autonomous systems, intelligent networks, applied ML</li>
+          <li>Incoming SDE Intern at Amazon Berlin (Nov 2026 – Apr 2027)</li>
+          <li>GNN vs. Transformer for autonomous driving trajectory prediction (BTU)</li>
+          <li>Seeking MSc thesis in AI / autonomous systems / intelligent networks in Germany</li>
         </ul>
       </div>
       <div class="sidebar-card">
@@ -473,10 +486,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <!-- Right: Sidebar -->
     <div class="sidebar-right reveal">
       <div class="sidebar-card">
-        <div class="sb-title">Active Research Projects</div>
+        <div class="sb-title">Research &amp; Projects</div>
         <ul class="sb-list">
-          <li>GNN vs. Transformer road network trajectory prediction (BTU)</li>
-          <li>5G O-RAN testbed with RL + XAI layer (TU Berlin)</li>
+          <li>GNN vs. Transformer road network trajectory prediction (BTU — ongoing)</li>
+          <li>MXRL: Explainable RL for 5G O-RAN slice control — completed Oct 2026 (TU Berlin)</li>
           <li>Multi-asset financial ML forecasting pipeline</li>
           <li>Recall Multi-document RAG pipeline</li>
         </ul>
@@ -568,14 +581,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 <section class="sec contact" id="contact">
   <div class="eye" style="justify-content:center">Contact</div>
   <h2 class="co-t">Let's Work Together</h2>
-  <p class="co-sub">Open to thesis and internship roles in AI engineering, autonomous systems, intelligent network research, and applied ML in Germany.</p>
+  <p class="co-sub">Incoming Amazon SDE Intern (Berlin, Nov 2026). Actively seeking an MSc thesis in AI engineering, autonomous systems, or intelligent networks in Germany.</p>
   <div class="co-links">
     <a href="mailto:qazihamzamajid@gmail.com" class="co-link">&#9993; qazihamzamajid@gmail.com</a>
     <a href="https://linkedin.com/in/qhamzamajid" target="_blank" class="co-link">in LinkedIn</a>
     <a href="https://github.com/hamzaqmajid" target="_blank" class="co-link">&#123;&#125; GitHub</a>
     <a href="CV/Hamza%20Majid%27s%20Resume.pdf" target="_blank" class="co-link">&#8595; Download CV</a>
   </div>
-  <p class="footer">Hamza Majid &nbsp;·&nbsp; Berlin &amp; Cottbus, Germany &nbsp;·&nbsp; 2026</p>
+  <p class="footer">Hamza Majid &nbsp;·&nbsp; Berlin &amp; Cottbus, Germany &nbsp;·&nbsp; Oct 2026</p>
 </section>
 
 <script>
